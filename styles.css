@@ -169,6 +169,58 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
+.sales-block h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.sales-card {
+  padding: 1.3rem;
+  border: 1px solid #edc8df;
+  background: linear-gradient(160deg, #fff7fc, #fff);
+}
+
+.sales-card p {
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.8rem;
+}
+
+.benefit-pill {
+  padding: 0.95rem;
+  font-weight: 700;
+  border: 1px solid #f2d7e6;
+  background: linear-gradient(180deg, #ffffff, #fff5fb);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+
+.testimonial-card {
+  padding: 1rem;
+  border: 1px solid #f0d5e4;
+  background: linear-gradient(180deg, #ffffff, #fff4fa);
+}
+
+.testimonial-card p {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  color: #5f4d6d;
+}
+
 .ig-section {
   padding-top: 2.2rem;
   padding-bottom: 1rem;
@@ -702,6 +754,11 @@ h1 {
   }
 
   .ig-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid,
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
