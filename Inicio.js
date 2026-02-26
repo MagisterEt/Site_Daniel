@@ -1,5 +1,6 @@
 const landingData = {
   buyLink: "https://seulinkdecurso.com",
+  countdownMinutes: 15,
   videos: [
     {
       title: "Banho profissional sem estresse",
@@ -90,4 +91,25 @@ function renderLandingPage() {
   year.textContent = new Date().getFullYear();
 }
 
-document.addEventListener("DOMContentLoaded", renderLandingPage);
+function startCountdown() {
+  const countdownElement = document.getElementById("countdown");
+  if (!countdownElement) return;
+
+  let totalSeconds = landingData.countdownMinutes * 60;
+  const interval = setInterval(() => {
+    const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
+    const seconds = String(totalSeconds % 60).padStart(2, "0");
+    countdownElement.textContent = `${minutes}:${seconds}`;
+
+    if (totalSeconds <= 0) {
+      clearInterval(interval);
+      countdownElement.textContent = "00:00";
+    }
+    totalSeconds -= 1;
+  }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderLandingPage();
+  startCountdown();
+});
