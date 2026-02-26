@@ -26,6 +26,7 @@ body {
   background:
     radial-gradient(circle at 15% 15%, #fff 0%, #fff7fb 48%),
     linear-gradient(180deg, #fff1f8 0%, #fff7fb 100%);
+  padding-bottom: 90px;
 }
 
 .hero {
@@ -713,6 +714,11 @@ h1 {
     text-align: center;
   }
 
+  .menu-link {
+    font-size: 0.84rem;
+    padding: 0.3rem 0.55rem;
+  }
+
   .hero-content {
     margin-top: 1.9rem;
   }
@@ -879,6 +885,25 @@ h1 {
 .btn-ig {
   border-color: rgba(255, 255, 255, 0.62);
   background: rgba(255, 255, 255, 0.12);
+}
+
+.sticky-buy-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
+  background: rgba(255, 247, 251, 0.95);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid #f3d4e5;
+}
+
+.sticky-buy-cta .btn {
+  width: min(520px, 100%);
 }
 
 

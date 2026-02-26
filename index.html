@@ -19,13 +19,13 @@
   <body>
     <header class="hero">
       <nav class="nav">
-        <span class="brand">Seu Nome Groomer</span>
+        <span class="brand" data-brand>Seu Nome Groomer</span>
         <div class="menu-links">
           <a class="menu-link active" href="./index.html">Início</a>
           <a class="menu-link" href="./tutoriais.html">Tutoriais</a>
           <a class="menu-link" href="./amostras.html">Amostras</a>
           <a class="menu-link" href="./resultados.html">Resultados</a>
-          <a class="menu-link btn-ig" href="https://www.instagram.com/daniel.groomer?igsh=bnRvNWhzeTU5cmJi" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="menu-link btn-ig" data-ig-link href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a class="btn btn-light" href="./comprar.html">Comprar</a>
         </div>
       </nav>
@@ -69,44 +69,19 @@
 
       <section class="section sales-block">
         <article class="card sales-card">
-          <h2>Por que este curso e diferente?</h2>
-          <p>
-            Metodo direto ao ponto para quem quer atender com mais seguranca,
-            melhorar acabamento e cobrar melhor pelo servico.
-          </p>
+          <h2 id="whyTitle"></h2>
+          <p id="whyText"></p>
         </article>
       </section>
 
       <section class="section sales-block">
-        <h2>O que voce vai aprender</h2>
-        <div class="benefits-grid">
-          <article class="card benefit-pill">Banho e secagem sem estressar o pet</article>
-          <article class="card benefit-pill">Tosa higienica e finalizacao comercial</article>
-          <article class="card benefit-pill">Padrao de atendimento profissional</article>
-          <article class="card benefit-pill">Produtos e ferramentas certas para cada caso</article>
-          <article class="card benefit-pill">Precificacao para aumentar lucro</article>
-          <article class="card benefit-pill">Seguranca e manejo no dia a dia</article>
-        </div>
+        <h2 id="benefitsTitle"></h2>
+        <div id="benefitsGrid" class="benefits-grid"></div>
       </section>
 
       <section class="section sales-block">
-        <h2>O que alunas e clientes dizem</h2>
-        <div class="testimonials-grid">
-          <article class="card testimonial-card">
-            <p>
-              "Consegui melhorar muito meu acabamento e comecei a fechar mais
-              atendimentos na semana."
-            </p>
-            <strong>- Aluna do curso</strong>
-          </article>
-          <article class="card testimonial-card">
-            <p>
-              "A didatica e simples e pratica. Apliquei no mesmo dia e ja vi
-              resultado nos pets."
-            </p>
-            <strong>- Groomer iniciante</strong>
-          </article>
-        </div>
+        <h2 id="testimonialsTitle"></h2>
+        <div id="testimonialsGrid" class="testimonials-grid"></div>
       </section>
 
       <section class="section page-grid">
@@ -134,9 +109,10 @@
     </main>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Seu Nome Groomer. <a href="https://www.instagram.com/daniel.groomer?igsh=bnRvNWhzeTU5cmJi" target="_blank" rel="noopener noreferrer">@daniel.groomer</a></p>
+      <p>© <span id="year"></span> <span data-brand>Seu Nome Groomer</span>. <a data-ig-link href="#" target="_blank" rel="noopener noreferrer"><span data-ig-handle>@daniel.groomer</span></a></p>
     </footer>
 
+    <script src="./site-config.js"></script>
     <script src="./Inicio.js"></script>
   </body>
 </html>
