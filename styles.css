@@ -683,3 +683,19 @@ h1 {
     transition: none !important;
   }
 }
+
+.footer a {
+  color: #7b3f63;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.btn-ig {
+  border-color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
