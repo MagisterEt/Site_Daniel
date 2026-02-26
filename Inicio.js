@@ -1,4 +1,17 @@
 const landingData = {
+  instagram: {
+    handle: "@daniel.groomer",
+    profileUrl: "https://www.instagram.com/daniel.groomer?igsh=bnRvNWhzeTU5cmJi",
+    profileImage:
+      "https://scontent-gru1-1.cdninstagram.com/v/t51.82787-19/533656286_17979652625887219_4276777498764704023_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=101&ccb=7-5&_nc_sid=bf7eb4",
+    followers: "616",
+    following: "122",
+    posts: "41",
+    role: "Esteticista Animal",
+    city: "Uberlandia - MG",
+    booking: "Agendamentos via WhatsApp",
+    sourceDate: "26/02/2026",
+  },
   buyLink: "https://seulinkdecurso.com",
   countdownMinutes: 15,
   videos: [
@@ -83,6 +96,16 @@ function renderLandingPage() {
   const resultsGrid = document.getElementById("resultsGrid");
   const buyButton = document.getElementById("buyButton");
   const year = document.getElementById("year");
+  const igFollowers = document.getElementById("igFollowers");
+  const igFollowing = document.getElementById("igFollowing");
+  const igPosts = document.getElementById("igPosts");
+  const igHandle = document.getElementById("igHandle");
+  const igRole = document.getElementById("igRole");
+  const igCity = document.getElementById("igCity");
+  const igBooking = document.getElementById("igBooking");
+  const igPhoto = document.getElementById("igPhoto");
+  const igSourceDate = document.getElementById("igSourceDate");
+  const igLinks = document.querySelectorAll("[data-ig-link]");
 
   if (videoGrid) {
     videoGrid.innerHTML = landingData.videos.map(createVideoCard).join("");
@@ -96,6 +119,18 @@ function renderLandingPage() {
   if (buyButton) {
     buyButton.href = landingData.buyLink;
   }
+  igLinks.forEach((link) => {
+    link.href = landingData.instagram.profileUrl;
+  });
+  if (igFollowers) igFollowers.textContent = landingData.instagram.followers;
+  if (igFollowing) igFollowing.textContent = landingData.instagram.following;
+  if (igPosts) igPosts.textContent = landingData.instagram.posts;
+  if (igHandle) igHandle.textContent = landingData.instagram.handle;
+  if (igRole) igRole.textContent = landingData.instagram.role;
+  if (igCity) igCity.textContent = landingData.instagram.city;
+  if (igBooking) igBooking.textContent = landingData.instagram.booking;
+  if (igPhoto) igPhoto.src = landingData.instagram.profileImage;
+  if (igSourceDate) igSourceDate.textContent = landingData.instagram.sourceDate;
   if (year) {
     year.textContent = new Date().getFullYear();
   }
