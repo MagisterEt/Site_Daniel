@@ -12,7 +12,12 @@ const landingData = {
     booking: "Agendamentos via WhatsApp",
     sourceDate: "26/02/2026",
   },
-  buyLink: "https://seulinkdecurso.com",
+  buyLink: "https://link.mercadopago.com.br/seu-link",
+  payments: {
+    mercadoPagoCreateLink:
+      "https://www.mercadopago.com.br/ferramentas-para-vender/link-de-pagamento",
+    whatsappLink: "https://wa.me/5500000000000?text=Quero%20me%20inscrever%20no%20curso",
+  },
   countdownMinutes: 15,
   videos: [
     {
@@ -106,6 +111,9 @@ function renderLandingPage() {
   const igPhoto = document.getElementById("igPhoto");
   const igSourceDate = document.getElementById("igSourceDate");
   const igLinks = document.querySelectorAll("[data-ig-link]");
+  const mpButton = document.getElementById("mercadoPagoButton");
+  const paymentHelper = document.getElementById("paymentHelper");
+  const whatsappButton = document.getElementById("whatsappButton");
 
   if (videoGrid) {
     videoGrid.innerHTML = landingData.videos.map(createVideoCard).join("");
@@ -118,6 +126,21 @@ function renderLandingPage() {
   }
   if (buyButton) {
     buyButton.href = landingData.buyLink;
+  }
+  if (mpButton) {
+    mpButton.href = landingData.buyLink;
+  }
+  if (whatsappButton) {
+    whatsappButton.href = landingData.payments.whatsappLink;
+  }
+  if (paymentHelper) {
+    const usingPlaceholder = landingData.buyLink.includes("seu-link");
+    if (usingPlaceholder) {
+      paymentHelper.innerHTML = `Configure seu link do Mercado Pago em <code>Inicio.js</code> no campo <code>buyLink</code>. Crie em <a href="${landingData.payments.mercadoPagoCreateLink}" target="_blank" rel="noopener noreferrer">Link de Pagamento</a>.`;
+    } else {
+      paymentHelper.textContent =
+        "Pagamento online ativo via Link de Pagamento do Mercado Pago.";
+    }
   }
   igLinks.forEach((link) => {
     link.href = landingData.instagram.profileUrl;
