@@ -20,7 +20,13 @@
     <header class="hero">
       <nav class="nav">
         <span class="brand">Seu Nome Groomer</span>
-        <a class="btn btn-light" href="#comprar">Garantir vaga</a>
+        <div class="menu-links">
+          <a class="menu-link active" href="./index.html">Início</a>
+          <a class="menu-link" href="./tutoriais.html">Tutoriais</a>
+          <a class="menu-link" href="./amostras.html">Amostras</a>
+          <a class="menu-link" href="./resultados.html">Resultados</a>
+          <a class="btn btn-light" href="./comprar.html">Comprar</a>
+        </div>
       </nav>
       <div class="hero-content">
         <p class="badge">Landing Page Profissional</p>
@@ -30,84 +36,34 @@
           você começar a atender com segurança.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#videos">Assistir tutoriais</a>
-          <a class="btn btn-outline" href="#resultados">Resultados reais</a>
+          <a class="btn btn-primary" href="./tutoriais.html">Assistir tutoriais</a>
+          <a class="btn btn-outline" href="./resultados.html">Resultados reais</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="section quick-nav">
-        <a class="quick-link" href="#amostras">Amostras</a>
-        <a class="quick-link" href="#resultados">Resultados Reais</a>
-        <a class="quick-link" href="#comprar">Oferta</a>
-      </section>
-
-      <section id="videos" class="section">
-        <div class="section-head">
-          <h2>Tutoriais em vídeo</h2>
-          <p>Conteúdo gratuito para mostrar sua autoridade.</p>
-        </div>
-        <div id="videoGrid" class="video-grid"></div>
-      </section>
-
-      <section id="amostras" class="section section-alt">
-        <div class="section-head">
-          <h2>Amostras do meu trabalho</h2>
-          <p>Cortes, acabamentos e padrão de qualidade.</p>
-        </div>
-        <div id="galleryGrid" class="gallery-grid"></div>
-      </section>
-
-      <section id="resultados" class="section">
-        <div class="section-head">
-          <h2>Resultados Reais</h2>
-          <p>Antes e depois de alunas e clientes.</p>
-        </div>
-        <div id="resultsGrid" class="gallery-grid"></div>
-      </section>
-
-      <section id="comprar" class="section cta">
-        <div class="urgency-bar">
-          <strong>Oferta com desconto termina em:</strong>
-          <span id="countdown">15:00</span>
-        </div>
-        <div class="checkout-layout">
-          <article class="offer-panel">
-            <h2>Curso Completo de Grooming</h2>
-            <p>
-              Aulas passo a passo, suporte e bônus para você evoluir mais rápido.
-            </p>
-            <ul class="checklist">
-              <li>Módulos do básico ao avançado</li>
-              <li>Certificado de conclusão</li>
-              <li>Grupo de dúvidas</li>
-              <li>Acesso imediato após pagamento</li>
-            </ul>
-            <div class="buy-box">
-              <p class="offer-badge">DESCONTO ESPECIAL HOJE</p>
-              <p class="price-old">de R$ 497,00</p>
-              <p class="price">R$ 297,00</p>
-              <p class="price-meta">ou 12x de R$ 29,70</p>
-            </div>
-          </article>
-
-          <aside class="checkout-card">
-            <h3>Finalizar inscrição</h3>
-            <label>Nome completo</label>
-            <input type="text" placeholder="Seu nome" />
-            <label>E-mail</label>
-            <input type="email" placeholder="seuemail@exemplo.com" />
-            <label>WhatsApp</label>
-            <input type="tel" placeholder="(11) 99999-9999" />
-
-            <a id="buyButton" class="btn btn-primary" href="#" target="_blank"
-              >Ir para pagamento seguro</a
-            >
-            <p class="safe-note">Pagamento 100% seguro com criptografia.</p>
-            <small>Ao clicar, você será redirecionado para a plataforma de pagamento.</small>
-          </aside>
-        </div>
+      <section class="section page-grid">
+        <article class="card page-card">
+          <h3>Tutoriais em vídeo</h3>
+          <p>Aprenda com aulas práticas e objetivas.</p>
+          <a class="btn btn-primary" href="./tutoriais.html">Ir para tutoriais</a>
+        </article>
+        <article class="card page-card">
+          <h3>Amostras do trabalho</h3>
+          <p>Veja acabamento, técnica e padrão profissional.</p>
+          <a class="btn btn-primary" href="./amostras.html">Ver amostras</a>
+        </article>
+        <article class="card page-card">
+          <h3>Resultados reais</h3>
+          <p>Antes e depois de clientes e alunas.</p>
+          <a class="btn btn-primary" href="./resultados.html">Ver resultados</a>
+        </article>
+        <article class="card page-card">
+          <h3>Comprar curso</h3>
+          <p>Oferta especial com pagamento seguro.</p>
+          <a class="btn btn-primary" href="./comprar.html">Finalizar inscrição</a>
+        </article>
       </section>
     </main>
 

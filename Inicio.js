@@ -84,11 +84,21 @@ function renderLandingPage() {
   const buyButton = document.getElementById("buyButton");
   const year = document.getElementById("year");
 
-  videoGrid.innerHTML = landingData.videos.map(createVideoCard).join("");
-  galleryGrid.innerHTML = landingData.samples.map(createSampleCard).join("");
-  resultsGrid.innerHTML = landingData.results.map(createSampleCard).join("");
-  buyButton.href = landingData.buyLink;
-  year.textContent = new Date().getFullYear();
+  if (videoGrid) {
+    videoGrid.innerHTML = landingData.videos.map(createVideoCard).join("");
+  }
+  if (galleryGrid) {
+    galleryGrid.innerHTML = landingData.samples.map(createSampleCard).join("");
+  }
+  if (resultsGrid) {
+    resultsGrid.innerHTML = landingData.results.map(createSampleCard).join("");
+  }
+  if (buyButton) {
+    buyButton.href = landingData.buyLink;
+  }
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 }
 
 function startCountdown() {
